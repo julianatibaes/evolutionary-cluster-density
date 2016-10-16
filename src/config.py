@@ -100,7 +100,7 @@ def check_valid_settings(settings):
     #Defining allowed values.
     functions_arr = ["geneticalgorithm", "differentialevolution", "particleswarmoptimization", "none"]
     algorithms_arr = ["kmeans", "fuzzycmeans", "spectralclustering"]
-    dataset_arr = ["iris", "wisconsin", "s1", "dim3", "spiral", "flame"]
+    dataset_arr = ["iris", "wisconsin", "s1", "dim3", "spiral", "flame", "simepar"]
     fitness_arr = ["dbi", "silhouette"]
     
     #Checking values against allowed values.

@@ -57,7 +57,11 @@ if __name__ == "__main__":
     if (settings.get("dataset") == "dim3"):
         label_pos = 3
         feat_num = 3
-    
+
+    if (settings.get("dataset") == "simepar"):
+        label_pos = 4
+        feat_num = 4
+
 ################################################################################
 ############################## Genetic Algorithm ###############################
 ################################################################################
@@ -1351,6 +1355,8 @@ if __name__ == "__main__":
                         all_vects = datasets.spiral.get_feat_vects()
                     if (settings.get("dataset") == "flame"):
                         all_vects = datasets.flame.get_feat_vects()
+                    if (settings.get("dataset") == "simepar"):
+                        all_vects = datasets.Simepar().get_feat_vects()
                     feat_vects = random.sample(all_vects, settings.get("num_data"))
                     #If it is the first iteration of the program, initiate particles and velocities.
                     if((i == 0) & (a == 0)):
